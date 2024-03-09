@@ -38,7 +38,7 @@ class CarState(CarStateBase):
     if self.CP.carFingerprint in FORDEV_CAR:
       self.hybrid_platform = False
     else:
-      self.hybrid_platform = cp.vl["VehicleOperatingModes"]["TrnAinTq_D_Qf"] == 0
+      self.hybrid_platform = False
 
     # Occasionally on startup, the ABS module recalibrates the steering pinion offset, so we need to block engagement
     # The vehicle usually recovers out of this state within a minute of normal driving
